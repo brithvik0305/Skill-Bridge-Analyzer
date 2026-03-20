@@ -24,6 +24,8 @@ python manage.py runserver
 ```bash
 python manage.py test
 ```
+### Video Link
+https://vimeo.com/1175467562?fl=ip&fe=ec
 
 ## AI Disclosure
 
