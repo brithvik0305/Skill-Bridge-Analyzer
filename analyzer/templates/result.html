@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+
+    <h2 class="text-center mb-4">🚀 Skill Gap Analysis</h2>
+
+    <!-- Match Score -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body text-center">
+            <h4>Match Score</h4>
+            <h1 class="text-primary">{{ result.match_score }}%</h1>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5>✅ Matched Skills</h5>
+                    <ul class="list-group">
+                        {% for skill in result.matched %}
+                        <li class="list-group-item">{{ skill }}</li>
+                        {% empty %}
+                        <li class="list-group-item">None</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5>❌ Missing Skills</h5>
+                    <ul class="list-group">
+                        {% for skill in result.missing %}
+                        <li class="list-group-item">{{ skill }}</li>
+                        {% empty %}
+                        <li class="list-group-item">None</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gap Analysis -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h5>📊 Gap Analysis</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Priority</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in result.gap_analysis %}
+                    <tr>
+                        <td>{{ item.skill }}</td>
+                        <td>
+                            {% if item.priority == "High" %}
+                                <span class="badge bg-danger">High</span>
+                            {% elif item.priority == "Medium" %}
+                                <span class="badge bg-warning text-dark">Medium</span>
+                            {% else %}
+                                <span class="badge bg-secondary">Low</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ item.reason }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Partial Skills -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h5>🧠 Partial Skills (Next Step)</h5>
+            <ul class="list-group">
+                {% for item in result.partial %}
+                <li class="list-group-item">
+                    <strong>{{ item.skill }}</strong> → {{ item.reason }}
+                </li>
+                {% empty %}
+                <li class="list-group-item">No partial skills detected</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5>🗺️ 30-60-90 Day Roadmap</h5>
+
+            <div class="row mt-3">
+
+                <div class="col-md-4">
+                    <h6 class="text-primary">30 Days</h6>
+                    <ul class="list-group">
+                        {% for step in result.roadmap.30_days %}
+                        <li class="list-group-item">{{ step }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="text-warning">60 Days</h6>
+                    <ul class="list-group">
+                        {% for step in result.roadmap.60_days %}
+                        <li class="list-group-item">{{ step }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="text-success">90 Days</h6>
+                    <ul class="list-group">
+                        {% for step in result.roadmap.90_days %}
+                        <li class="list-group-item">{{ step }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

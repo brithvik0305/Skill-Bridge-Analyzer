@@ -1,0 +1,52 @@
+[
+  {
+    "candidate_id": 1,
+    "name": "Alex Kumar",
+    "skills": ["Python", "SQL", "Flask", "Git"],
+    "projects": [
+      "Built a task manager API using Flask and SQLite",
+      "Created a student result dashboard with Python and SQL"
+    ],
+    "target_role": "Backend Developer"
+  },
+  {
+    "candidate_id": 2,
+    "name": "Maya Reddy",
+    "skills": ["JavaScript", "React", "HTML", "CSS", "Bootstrap"],
+    "projects": [
+      "Built a portfolio website using React",
+      "Developed an e-commerce frontend with responsive design"
+    ],
+    "target_role": "Frontend Developer"
+  },
+  {
+    "candidate_id": 3,
+    "name": "Neeraj Shah",
+    "skills": ["Python", "Excel", "SQL", "Tableau"],
+    "projects": [
+      "Analyzed sales trends using SQL and Tableau",
+      "Built a reporting dashboard for student placement data"
+    ],
+    "target_role": "Data Analyst"
+  },
+  {
+    "candidate_id": 4,
+    "name": "Sara Menon",
+    "skills": ["Python", "TensorFlow", "Scikit-learn", "Pandas"],
+    "projects": [
+      "Trained an image classification model on synthetic data",
+      "Built a machine learning pipeline for sentiment analysis"
+    ],
+    "target_role": "ML Engineer"
+  },
+  {
+    "candidate_id": 5,
+    "name": "Rohan Verma",
+    "skills": ["Linux", "AWS", "Docker", "GitHub Actions"],
+    "projects": [
+      "Deployed a containerized web app on AWS",
+      "Created a CI/CD workflow using GitHub Actions"
+    ],
+    "target_role": "Cloud Engineer"
+  }
+]

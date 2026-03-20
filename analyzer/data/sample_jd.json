@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "role": "Backend Developer",
+    "company": "NovaStack Labs",
+    "description": "NovaStack Labs is hiring a Backend Developer with strong experience in Python, Django, REST APIs, PostgreSQL, Git, Docker, and AWS. Candidates should be comfortable building scalable backend services, writing clean APIs, and collaborating with frontend teams."
+  },
+  {
+    "id": 2,
+    "role": "Frontend Developer",
+    "company": "PixelForge Studio",
+    "description": "We are looking for a Frontend Developer with skills in JavaScript, React, HTML, CSS, Bootstrap, TypeScript, and API integration. Experience with responsive design and modern frontend workflows is preferred."
+  },
+  {
+    "id": 3,
+    "role": "Data Analyst",
+    "company": "Syntrix Analytics",
+    "description": "Seeking a Data Analyst proficient in SQL, Python, Excel, Power BI, Tableau, and data visualization. The role involves data cleaning, reporting, dashboard creation, and communicating insights to stakeholders."
+  },
+  {
+    "id": 4,
+    "role": "ML Engineer",
+    "company": "BrightAI Systems",
+    "description": "BrightAI Systems is hiring an ML Engineer with expertise in Python, TensorFlow, PyTorch, Scikit-learn, Docker, Kubernetes, MLOps, and cloud deployment. Candidates should have experience building and deploying machine learning pipelines."
+  },
+  {
+    "id": 5,
+    "role": "Cloud Engineer",
+    "company": "BluePeak Cloud",
+    "description": "BluePeak Cloud is looking for a Cloud Engineer with experience in AWS, Azure, Docker, Kubernetes, Terraform, Linux, CI/CD, and networking. Knowledge of infrastructure automation and monitoring is highly valued."
+  }
+]
